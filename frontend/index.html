@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>MovieMatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎬 MovieMatch</h1>
+
+  <div id="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for a movie..." />
+    <button onclick="handleSearch()">🔍</button>
+  </div>
+
+  <a href="favorites.html">❤️ View My Favorites</a>
+
+  <div id="genre-selection">
+    <button data-genre="28">Action</button>
+    <button data-genre="35">Comedy</button>
+    <button data-genre="18">Drama</button>
+    <button data-genre="10749">Romance</button>
+  </div>
+
+  <!-- Carrousel -->
+  <div class="carousel-wrapper">
+    <button class="carousel-arrow left" onclick="changePage(-1)">⬅️</button>
+    <div id="results" class="carousel-track"></div>
+    <button class="carousel-arrow right" onclick="changePage(1)">➡️</button>
+  </div>
+
+  <script src="script.js" defer></script>
+
+  <!-- MODAL -->
+  <div id="movieModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">❌</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+</body>
+</html>
